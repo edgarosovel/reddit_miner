@@ -2,7 +2,8 @@ var path = require('path')
 var url_ = require('url')
 
 let domains = {
-	'i.imgur.com' : imgur,
+	'i.imgur.com' : i_imgur,
+	'imgur.com' : imgur,
 	'gfycat.com' : gfycat,
 	'media.giphy.com' : default_
 }
@@ -17,6 +18,11 @@ let wanted_extensions = {
 }
 
 function imgur(url) {
+	url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
+	return default_(url)
+}
+
+function i_imgur(url) {
 	if (path.extname(url)==='.gifv') url = url.substring(0, url.length - 1);
 	return default_(url)
 }

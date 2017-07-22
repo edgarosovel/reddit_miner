@@ -28,10 +28,10 @@ module.exports = {
 		    var params = { status: text, media_ids: [mediaIdStr] }
 			//tweet it
 		    T.post('statuses/update', params, function (err, data, response) {
-		      console.log(`tweeted! ${data.text}`)
+		      //tweet successful
 		      rmdir(path.dirname(media_path),(err)=>{
 		      	if (err) return log.error(`${path.dirname(media_path)} not deleted. ${err}`)
-		      	console.log(`Folder ${path.dirname(media_path)} deleted`)
+		      	//folder deleted
 		      })
 		    })
 
