@@ -4,6 +4,7 @@
   "description": "Mine memes from reddit",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +18,9 @@
   },
   "homepage": "https://github.com/edgarosovel/reddit_miner#readme",
   "dependencies": {
-    "dotenv": "^4.0.0",
     "image-downloader": "^3.2.2",
-    "reddit-snooper": "^1.0.1",
+    "mongodb": "latest",
+    "reddit-snooper": "latest",
     "rmdir": "^1.2.0",
     "twit": "^2.2.9",
     "winston": "^2.3.1"

@@ -1,32 +1,64 @@
 var fs = require('fs')
+var path_ = require('path')
 var rmdir = require('rmdir')
 var request = require('request')
-var path_ = require('path')
 var log = require('winston')
+const config = require(`${__dirname}/../config`)
+
+fs.readdirSync(`${__dirname}/../img/`)
+    .map(dir => delete_download(`${__dirname}/../img/${dir}`))
 
 module.exports =
 	(uri, filename, post_id, callback) => {
-		// console.log(`dirname ${__dirname}`)
-		// console.log(`cwd ${process.cwd()}`)
 		let path = `${__dirname}/../img/${post_id}/`
 		fs.mkdir(path, (err) =>{
-			if (err) return log.error(`Mkdir failed: ${path}`)
+			if (err) {
+				log.error(`Mkdir failed: ${post_id} ${filename}`)
+				return callback(err)
+			}
 		})
+		// log.info(`downloading ${uri} ${post_id} ${filename}`)
 		request(uri).pipe(fs.createWriteStream(path+filename).on('error', function (err) {
-		   	error_downloading('Error on saving to server', uri, path)
-		})).on('close', ()=>{
-			callback(path+filename)
+			log.error(`${err}`)
+		   	error_downloading('Error media write stream', uri, path)
+		   	callback(err)
+		})).on('close', ()=>{ 
+			//close write stream
 		}).on('error', (err)=>{
+			log.error(`${err}`)
 			error_downloading('Error on url request',uri, path)
+			callback(err)
+		}).on('close', ()=>{ 
+			//close uri request
+			if (is_size_ok(path+filename)){ //downlaod correct
+				callback(false,path+filename)
+			}else{
+				log.error(`File too large ${uri} ${post_id} ${filename}`)
+				delete_download(path)
+				callback(true)
+			}
+			
 		})
 	}
 
+function is_size_ok(file){
+	const size = fs.statSync(file).size
+	if (path_.extname(file).toLowerCase()==='.gif') {
+		return size > config.GIF_SIZE ? false : true
+	}else{
+		return size > config.PIC_SIZE ? false : true
+	}
+}
+
 function error_downloading(err, uri, path){
+	delete_download(path)
+	log.error(`Download failed: ${err}\nUri: ${uri}`)
+}
+
+function delete_download(path){
 	rmdir(path, function (err, dirs, files) {
 	  if (err) {
 	  	log.error(`Rmdir failed on: ${path}`)
 	  }
 	})
-
-	log.error(`Download failed: ${err}\nUri: ${uri}`)
 }

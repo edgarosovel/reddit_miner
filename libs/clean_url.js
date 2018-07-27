@@ -18,17 +18,24 @@ let wanted_extensions = {
 }
 
 function imgur(url) {
-	url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
+	if (path.extname(url)==='.gifv'){
+		url = url.substring(0, url.length - 1);
+	}else{
+		url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
+	}
 	return default_(url)
 }
 
 function i_imgur(url) {
-	if (path.extname(url)==='.gifv') url = url.substring(0, url.length - 1);
+	if (path.extname(url)==='.gifv') {
+		url = url.substring(0, url.length - 1)
+	}
 	return default_(url)
 }
 
 function gfycat(url){
-	url = 'https://giant.gfycat.com/'+path.basename(url)+'.gif'
+	// url = 'https://giant.gfycat.com/'+path.basename(url)+'.gif'
+	url = 'https://thumbs.gfycat.com/'+path.basename(url)+'-size_restricted'+'.gif'
 	return default_(url)
 }
 
