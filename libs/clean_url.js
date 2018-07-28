@@ -1,5 +1,4 @@
 var path = require('path')
-var url_ = require('url')
 
 let domains = {
 	'i.imgur.com' : i_imgur,
@@ -19,7 +18,7 @@ let wanted_extensions = {
 
 function imgur(url) {
 	if (path.extname(url)==='.gifv'){
-		url = url.substring(0, url.length - 1);
+		url = `https://imgur.com/download/${path.basename(url)}`;
 	}else{
 		url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
 	}
@@ -28,7 +27,7 @@ function imgur(url) {
 
 function i_imgur(url) {
 	if (path.extname(url)==='.gifv') {
-		url = url.substring(0, url.length - 1)
+		url = `https://imgur.com/download/${path.basename(url)}`;
 	}
 	return default_(url)
 }

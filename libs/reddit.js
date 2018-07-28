@@ -1,7 +1,6 @@
 var Snooper = require('reddit-snooper')
 snooper = new Snooper({automatic_retries: true,
 			api_requests_per_minuite: 60 })
-var download = require('./download')
 var clean_url = require('./clean_url')
 var twitter = require('./twitter')
 const config = require(`${__dirname}/../config`)
