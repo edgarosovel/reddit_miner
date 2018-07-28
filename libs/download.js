@@ -6,7 +6,7 @@ var log = require('winston')
 const config = require(`${__dirname}/../config`)
 
 fs.readdirSync(`${__dirname}/../img/`)
-    .map(dir => delete_download(`${__dirname}/../img/${dir}`))
+	.map(dir => delete_download(`${__dirname}/../img/${dir}`))
 
 module.exports =
 	(uri, filename, post_id, callback) => {
