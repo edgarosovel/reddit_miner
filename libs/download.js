@@ -5,8 +5,11 @@ var request = require('request')
 var log = require('winston')
 const config = require(`${__dirname}/../config`)
 
-fs.readdirSync(`${__dirname}/../img/`)
-	.map(dir => delete_download(`${__dirname}/../img/${dir}`))
+try{
+	fs.readdirSync(`${__dirname}/../img/`).map(dir => delete_download(`${__dirname}/../img/${dir}`))
+}catch(e){
+	console.log('Img folder clean');
+}
 
 module.exports =
 	(uri, filename, post_id, callback) => {
