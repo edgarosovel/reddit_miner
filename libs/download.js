@@ -16,7 +16,7 @@ module.exports =
 		let path = `${__dirname}/../img/${post_id}/`
 		fs.mkdir(path, (err) =>{
 			if (err) {
-				console.log(`Mkdir failed: ${post_id} ${filename}`)
+				console.log(`Mkdir failed: ${post_id} ${filename} ${err}`)
 				return callback(err)
 			}
 		})
@@ -68,7 +68,7 @@ function delete_download(path){
 	rmdir(path, function (err, dirs, files) {
 	  if (err) {
 		//   log.error(`Rmdir failed on: ${path}`)
-		  console.log(`Rmdir failed on: ${path}`);
+		  console.log(`Rmdir failed on: ${path} ${err}`);
 	  }
 	})
 }
