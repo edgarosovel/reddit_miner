@@ -16,12 +16,12 @@ module.exports =
 		let path = `${__dirname}/../img/${post_id}/`
 		fs.mkdir(path, (err) =>{
 			if (err) {
-				log.error(`Mkdir failed: ${post_id} ${filename}`)
+				console.log(`Mkdir failed: ${post_id} ${filename}`)
 				return callback(err)
 			}
 		})
-		request(uri).pipe(fs.createWriteStream(path+filename).on('error', function (err) {
-			// log.error(`${err}`)
+		request(uri).pipe(fs.createWriteStream(path+filename)
+		.on('error', function (err) {
 			console.log(`${err}`)
 		   	error_downloading('Error media write stream', uri, path)
 		   	callback(err)
@@ -37,7 +37,7 @@ module.exports =
 			if (is_size_ok(path+filename)){ //downlaod correct
 				callback(false,path+filename)
 			}else{
-				log.error(`File too large ${uri} ${post_id} ${filename}`)
+				console.log(`File too large ${uri} ${post_id} ${filename}`)
 				delete_download(path)
 				callback(true)
 			}
