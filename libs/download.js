@@ -21,18 +21,21 @@ module.exports =
 			}
 		})
 		request(uri).pipe(fs.createWriteStream(path+filename)
-		.on('error', function (err) {
-			console.log(`${err}`)
-		   	error_downloading('Error media write stream', uri, path)
-		   	callback(err)
-		})).on('close', ()=>{ 
-			//close write stream
-		}).on('error', (err)=>{
+			.on('error', function (err) {
+				console.log(`${err}`)
+				error_downloading('Error media write stream', uri, path)
+				callback(err)
+			}))
+			.on('close', ()=>{ 
+				//close write stream
+			})
+		.on('error', (err)=>{
 			console.log(`${err}`)
 			// log.error(`${err}`)
 			error_downloading('Error on url request',uri, path)
 			callback(err)
-		}).on('close', ()=>{ 
+		})
+		.on('close', ()=>{ 
 			//close uri request
 			if (is_size_ok(path+filename)){ //downlaod correct
 				callback(false,path+filename)

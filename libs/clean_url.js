@@ -40,9 +40,9 @@ function gfycat(url){
 }
 
 function default_(url){
-	return (path.extname(url)!=='' && path.extname(url).toLowerCase() in wanted_extensions) ? [url, path.basename(url)] : undefined
+	return (path.extname(url)!=='' && path.extname(url).toLowerCase() in wanted_extensions) ? url : undefined
 }
 
 module.exports = (domain, url) => {
-	return (domain in domains) ? domains[domain](url) : default_(url)
+	return (domain in domains) ? domains[domain](url) : default_(url);
 }

@@ -15,17 +15,14 @@ setTimeout(()=>{
 function make_post(post){
     if (!post) return;
     if (post.data.stickied || post.kind !== 't3') return;
-    let url = clean_url(post.data.domain, post.data.url)
-	if (!url) return 
-    download(url[0], url[1], post.data.id, (err, media_path)=>{
-        if (err) return;
-        let title = post.data.title
-        let emoji = post.emojis
-        twitter.tweet(media_path,title,emoji,(err)=>{
-			if (err) return;
-			// tweet succesfull
-        })  
-    })
+    let url = clean_url(post.data.domain, post.data.url);
+	if (!url) return;
+	let title = post.data.title
+	let emoji = post.emojis
+	twitter.tweet(url,title,emoji,(err)=>{
+		if (err) return;
+		// tweet succesfull
+	});  
 }
 
 module.exports = {

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/edgarosovel/reddit_miner#readme",
   "dependencies": {
+    "bl": "^2.0.1",
     "image-downloader": "^3.2.2",
     "mongodb": "latest",
     "reddit-snooper": "latest",

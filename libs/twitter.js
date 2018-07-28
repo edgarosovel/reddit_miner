@@ -1,8 +1,8 @@
 var Twit = require('twit')
 var log = require('winston')
-var path = require('path')
-var rmdir = require('rmdir')
+var request = require('request')
 const config = require(`${__dirname}/../config`)
+const bl = require('bl');
 
 var T = new Twit({
   consumer_key:         config.CONSUMER_KEY,
@@ -11,55 +11,48 @@ var T = new Twit({
   access_token_secret:  config.ACCES_TOKEN_SECRET
 })
 
-function tweet_with_media (media_path, imgDesc, text, callback){
-	return;
-	T.postMediaChunked({ file_path: media_path }, function (err, data, response) {
-	  if (err) {
-	  	delete_media(media_path)
-			// log.error(`Error uploading: ${media_path} ${err}`)
-			console.log(`Error uploading: ${media_path} ${err}`)
-	  	return callback(true)
-	  }
-	  var mediaIdStr = data.media_id_string
-	  var altText = imgDesc
-	  var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
+function tweet_with_media (media_URL, imgDesc, text, callback){
+	request(media_URL).pipe(bl(function (err, data) {
+			if (err) return callback(err)
+			let base64 = data.toString('base64');
+			T.post('media/upload', { media_data: base64 }, 	function (err, data, response) {
+				if (err) {
+					console.log(`Error uploading: ${media_URL} ${err}`);
+					return callback(err);
+				}
+				var mediaIdStr = data.media_id_string
+				var altText = imgDesc
+				var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
+		
+				T.post('media/metadata/create', meta_params, function (err, data, response) {
+					if (err) {
+						console.log(`Error updating metadata: ${media_URL} for ${mediaIdStr}`); // log.error(`Error updating metadata: ${media_path} for ${mediaIdStr}`)
+						return callback(err)
+					}
+					var params = { status: text, media_ids: [mediaIdStr] }
+		
+					T.post('statuses/update', params, function (err, data, response) {
+						if (err) {
+						console.log(`Error tweeting: ${err} ${text}`); // log.error(`Error tweeting: ${err} ${text}`)
+						return callback(err)
+						}
+						//tweeted!
+						return callback(false)
+					})
+		
+				})
+			});
+		}))
+		.on('error', (err)=>{
+			console.log(`Error downloading media ${err}`)
+		});
 
-	  T.post('media/metadata/create', meta_params, function (err, data, response) {
-	    if (err) {
-				delete_media(media_path)
-				console.log(`Error updating metadata: ${media_path} for ${mediaIdStr}`);
-	    	// log.error(`Error updating metadata: ${media_path} for ${mediaIdStr}`)
-	    	return callback(true)
-	    }
-	    var params = { status: text, media_ids: [mediaIdStr] }
-
-	    T.post('statuses/update', params, function (err, data, response) {
-	      if (err) {
-				console.log(`Error tweeting: ${err} ${text}`);
-	    	// log.error(`Error tweeting: ${err} ${text}`)
-	    	delete_media(media_path)
-	    	return callback(true)
-	      }
-	      //tweeted!
-	      delete_media(media_path)
-	      return callback(false)
-	    })
-
-	  })
-	})
-}
-
-function delete_media(media_path){
-	rmdir(path.dirname(media_path),(err)=>{
-      	if (err) return log.error(`${media_path} not deleted. ${err}`)
-      	//folder deleted
-	})
 }
 
 module.exports = {
-	tweet:(file_path, txt, emoji, callback)=>{
+	tweet:(media_URL, txt, emoji, callback)=>{
         txt = txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/x-?post/i,'')
         let msg = `${emoji}: "${txt}"`
-        tweet_with_media(file_path, txt, msg, callback)
+        tweet_with_media(media_URL, txt, msg, callback)
     }
 }
