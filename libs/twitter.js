@@ -1,4 +1,3 @@
-var fs = require('fs')
 var Twit = require('twit')
 var log = require('winston')
 var path = require('path')
@@ -13,34 +12,31 @@ var T = new Twit({
 })
 
 function tweet_with_media (media_path, imgDesc, text, callback){
-	//upload
-    // log.info(`uploading ${media_path}`)
-    // // post media via the chunked media upload API.
+	return;
 	T.postMediaChunked({ file_path: media_path }, function (err, data, response) {
-	// var b64content = fs.readFileSync(media_path, { encoding: 'base64' })
-	// T.post('media/upload', { media_data: b64content }, function (err, data, response) {
 	  if (err) {
 	  	delete_media(media_path)
-	  	log.error(`Error uploading: ${media_path} ${err}`)
+			// log.error(`Error uploading: ${media_path} ${err}`)
+			console.log(`Error uploading: ${media_path} ${err}`)
 	  	return callback(true)
 	  }
 	  var mediaIdStr = data.media_id_string
 	  var altText = imgDesc
 	  var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
-      // log.info(`diting metadata ${media_path}`)
-	  //update metadata
+
 	  T.post('media/metadata/create', meta_params, function (err, data, response) {
 	    if (err) {
-	    	delete_media(media_path)
-	    	log.error(`Error updating metadata: ${media_path} for ${mediaIdStr}`)
+				delete_media(media_path)
+				console.log(`Error updating metadata: ${media_path} for ${mediaIdStr}`);
+	    	// log.error(`Error updating metadata: ${media_path} for ${mediaIdStr}`)
 	    	return callback(true)
 	    }
 	    var params = { status: text, media_ids: [mediaIdStr] }
-		//tweet it
-        // log.info('tweeting')
+
 	    T.post('statuses/update', params, function (err, data, response) {
 	      if (err) {
-	    	log.error(`Error tweeting: ${err} ${text}`)
+				console.log(`Error tweeting: ${err} ${text}`);
+	    	// log.error(`Error tweeting: ${err} ${text}`)
 	    	delete_media(media_path)
 	    	return callback(true)
 	      }
@@ -66,5 +62,4 @@ module.exports = {
         let msg = `${emoji}: "${txt}"`
         tweet_with_media(file_path, txt, msg, callback)
     }
-
 }

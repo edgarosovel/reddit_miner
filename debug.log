@@ -36,3 +36,149 @@
 {"level":"info","message":"url cleaned: https://i.imgur.com/hdNcGYB.gif,hdNcGYB.gif","timestamp":"2017-07-30T17:01:59.851Z"}
 {"level":"error","message":"File too large https://i.imgur.com/hdNcGYB.gif 6qhgbi hdNcGYB.gif","timestamp":"2017-07-30T17:16:45.846Z"}
 {"level":"info","message":"url cleaned: https://i.imgur.com/ay2wXQi.gif,ay2wXQi.gif","timestamp":"2017-07-30T17:16:45.858Z"}
+{"level":"info","message":"||||||||STARTING|||||||||","timestamp":"2018-07-27T22:09:23.654Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/e3m5xhwzshc11.jpg,e3m5xhwzshc11.jpg","timestamp":"2018-07-27T22:10:24.181Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/hplbqdw55c711.jpg,hplbqdw55c711.jpg","timestamp":"2018-07-27T22:12:36.227Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/mTQ5fCh.gif,mTQ5fCh.gif","timestamp":"2018-07-27T22:13:36.169Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/mTQ5fCh.gif,mTQ5fCh.gif","timestamp":"2018-07-27T22:14:36.221Z"}
+{"level":"error","message":"Mkdir failed: 92big3 mTQ5fCh.gif","timestamp":"2018-07-27T22:14:36.223Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/owisivf0cic11.jpg,owisivf0cic11.jpg","timestamp":"2018-07-27T22:14:37.011Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/XfNeC7C.jpg,XfNeC7C.jpg","timestamp":"2018-07-27T22:15:54.063Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/u92faxzx7ic11.jpg,u92faxzx7ic11.jpg","timestamp":"2018-07-27T22:16:54.583Z"}
+{"level":"error","message":"File too large https://i.imgur.com/mTQ5fCh.gif 92big3 mTQ5fCh.gif","timestamp":"2018-07-27T22:17:49.283Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:17:49.550Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/wc1q05y7uhc11.jpg,wc1q05y7uhc11.jpg","timestamp":"2018-07-27T22:17:49.841Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/jgxlpti3sjc11.jpg,jgxlpti3sjc11.jpg","timestamp":"2018-07-27T22:18:58.011Z"}
+{"level":"info","message":"||||||||STARTING|||||||||","timestamp":"2018-07-27T22:25:41.254Z"}
+{"level":"info","message":"||||||||STARTING|||||||||","timestamp":"2018-07-27T22:26:14.458Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/KtDi964.gif,KtDi964.gif","timestamp":"2018-07-27T22:26:32.602Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/KtDi964.gif,KtDi964.gif","timestamp":"2018-07-27T22:26:50.876Z"}
+{"level":"error","message":"Mkdir failed: 92buvo KtDi964.gif","timestamp":"2018-07-27T22:26:50.879Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/4ztoxfhb7ic11.jpg,4ztoxfhb7ic11.jpg","timestamp":"2018-07-27T22:26:51.293Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/8s8hvmlazic11.jpg,8s8hvmlazic11.jpg","timestamp":"2018-07-27T22:27:18.100Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/ExcellentWindingHapuku-size_restricted.gif,ExcellentWindingHapuku-size_restricted.gif","timestamp":"2018-07-27T22:27:36.211Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/ExcellentWindingHapuku-size_restricted.gif,ExcellentWindingHapuku-size_restricted.gif","timestamp":"2018-07-27T22:27:54.324Z"}
+{"level":"error","message":"Mkdir failed: 91sfkm ExcellentWindingHapuku-size_restricted.gif","timestamp":"2018-07-27T22:27:54.325Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/wc1q05y7uhc11.jpg,wc1q05y7uhc11.jpg","timestamp":"2018-07-27T22:27:54.824Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:28:28.559Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:28:28.989Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/ThisImpracticalArrowcrab-size_restricted.gif,ThisImpracticalArrowcrab-size_restricted.gif","timestamp":"2018-07-27T22:28:29.410Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/ThisImpracticalArrowcrab-size_restricted.gif,ThisImpracticalArrowcrab-size_restricted.gif","timestamp":"2018-07-27T22:28:49.191Z"}
+{"level":"error","message":"Mkdir failed: 92dskf ThisImpracticalArrowcrab-size_restricted.gif","timestamp":"2018-07-27T22:28:49.193Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/iggcalhaghc11.jpg,iggcalhaghc11.jpg","timestamp":"2018-07-27T22:28:49.830Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92buvo/KtDi964.gif not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92buvo'","timestamp":"2018-07-27T22:29:13.988Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/iggcalhaghc11.jpg,iggcalhaghc11.jpg","timestamp":"2018-07-27T22:29:32.211Z"}
+{"level":"error","message":"Mkdir failed: 92c0cr iggcalhaghc11.jpg","timestamp":"2018-07-27T22:29:32.212Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/aSKU2Bs.jpg,aSKU2Bs.jpg","timestamp":"2018-07-27T22:29:33.142Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/ZSIiFMX.jpg,ZSIiFMX.jpg","timestamp":"2018-07-27T22:30:20.538Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:30:38.648Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/i9czqrwa3ic11.jpg,i9czqrwa3ic11.jpg","timestamp":"2018-07-27T22:30:39.476Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/i9czqrwa3ic11.jpg,i9czqrwa3ic11.jpg","timestamp":"2018-07-27T22:32:18.031Z"}
+{"level":"error","message":"Mkdir failed: 92cz4c i9czqrwa3ic11.jpg","timestamp":"2018-07-27T22:32:18.033Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:32:19.165Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:32:20.688Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:32:21.759Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/4mpypwcsuhc11.jpg,4mpypwcsuhc11.jpg","timestamp":"2018-07-27T22:32:22.287Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/inx9EXo.gif,inx9EXo.gif","timestamp":"2018-07-27T22:32:57.668Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c0cr/iggcalhaghc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c0cr'","timestamp":"2018-07-27T22:33:04.722Z"}
+{"level":"error","message":"Error tweeting: Error: Unsupported format Jpeg 😳💥😂: \"Kate Beckinsale getting kisses on her 45th birthday ( from \"","timestamp":"2018-07-27T22:33:09.055Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:33:09.776Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:33:10.560Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:33:11.593Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/vzdjnm3rmcc11.jpg,vzdjnm3rmcc11.jpg","timestamp":"2018-07-27T22:33:12.213Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lv6j5tx7cgc11.jpg,lv6j5tx7cgc11.jpg","timestamp":"2018-07-27T22:33:44.299Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lv6j5tx7cgc11.jpg,lv6j5tx7cgc11.jpg","timestamp":"2018-07-27T22:34:02.628Z"}
+{"level":"error","message":"Mkdir failed: 92asa0 lv6j5tx7cgc11.jpg","timestamp":"2018-07-27T22:34:02.630Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:34:03.738Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/b4l85nc8bjc11.jpg,b4l85nc8bjc11.jpg","timestamp":"2018-07-27T22:34:05.481Z"}
+{"level":"error","message":"Error uploading: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92asa0/lv6j5tx7cgc11.jpg Error: Segments do not add up to provided total file size.","timestamp":"2018-07-27T22:34:26.148Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/u92faxzx7ic11.jpg,u92faxzx7ic11.jpg","timestamp":"2018-07-27T22:34:27.055Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/fw9y2gaxmhc11.jpg,fw9y2gaxmhc11.jpg","timestamp":"2018-07-27T22:34:57.699Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/fw9y2gaxmhc11.jpg,fw9y2gaxmhc11.jpg","timestamp":"2018-07-27T22:35:15.774Z"}
+{"level":"error","message":"Mkdir failed: 92c9jn fw9y2gaxmhc11.jpg","timestamp":"2018-07-27T22:35:15.775Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:35:16.474Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/ks38xcjehic11.gif,ks38xcjehic11.gif","timestamp":"2018-07-27T22:35:18.951Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92cz4c/i9czqrwa3ic11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92cz4c'","timestamp":"2018-07-27T22:35:50.622Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/ks38xcjehic11.gif,ks38xcjehic11.gif","timestamp":"2018-07-27T22:36:08.999Z"}
+{"level":"error","message":"Mkdir failed: 92dmvc ks38xcjehic11.gif","timestamp":"2018-07-27T22:36:09.001Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/e3m5xhwzshc11.jpg,e3m5xhwzshc11.jpg","timestamp":"2018-07-27T22:36:11.448Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92asa0/lv6j5tx7cgc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92asa0'","timestamp":"2018-07-27T22:37:06.573Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/e3m5xhwzshc11.jpg,e3m5xhwzshc11.jpg","timestamp":"2018-07-27T22:37:25.024Z"}
+{"level":"error","message":"Mkdir failed: 92cinz e3m5xhwzshc11.jpg","timestamp":"2018-07-27T22:37:25.026Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/apjd6jhejic11.jpg,apjd6jhejic11.jpg","timestamp":"2018-07-27T22:37:25.768Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/hplbqdw55c711.jpg,hplbqdw55c711.jpg","timestamp":"2018-07-27T22:38:20.274Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/hplbqdw55c711.jpg,hplbqdw55c711.jpg","timestamp":"2018-07-27T22:38:38.296Z"}
+{"level":"error","message":"Mkdir failed: 92d11u hplbqdw55c711.jpg","timestamp":"2018-07-27T22:38:38.298Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/XfNeC7C.jpg,XfNeC7C.jpg","timestamp":"2018-07-27T22:38:40.810Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c9jn/fw9y2gaxmhc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c9jn'","timestamp":"2018-07-27T22:38:44.650Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/XfNeC7C.jpg,XfNeC7C.jpg","timestamp":"2018-07-27T22:39:03.344Z"}
+{"level":"error","message":"Mkdir failed: 92e3zw XfNeC7C.jpg","timestamp":"2018-07-27T22:39:03.346Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/jgxlpti3sjc11.jpg,jgxlpti3sjc11.jpg","timestamp":"2018-07-27T22:39:04.772Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/jgxlpti3sjc11.jpg,jgxlpti3sjc11.jpg","timestamp":"2018-07-27T22:40:16.278Z"}
+{"level":"error","message":"Mkdir failed: 92fvpn jgxlpti3sjc11.jpg","timestamp":"2018-07-27T22:40:16.280Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92d11u/hplbqdw55c711.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92d11u'","timestamp":"2018-07-27T22:40:16.487Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/Rk5Nezk.gif,Rk5Nezk.gif","timestamp":"2018-07-27T22:40:17.422Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/Rk5Nezk.gif,Rk5Nezk.gif","timestamp":"2018-07-27T22:40:34.947Z"}
+{"level":"error","message":"Mkdir failed: 92de3m Rk5Nezk.gif","timestamp":"2018-07-27T22:40:34.948Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lnqgsn2qvgc11.jpg,lnqgsn2qvgc11.jpg","timestamp":"2018-07-27T22:40:36.536Z"}
+{"level":"error","message":"Error uploading: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmvc/ks38xcjehic11.gif Error: socket hang up","timestamp":"2018-07-27T22:40:40.093Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lnqgsn2qvgc11.jpg,lnqgsn2qvgc11.jpg","timestamp":"2018-07-27T22:40:42.343Z"}
+{"level":"error","message":"Mkdir failed: 92bcyi lnqgsn2qvgc11.jpg","timestamp":"2018-07-27T22:40:42.345Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/mTQ5fCh.gif,mTQ5fCh.gif","timestamp":"2018-07-27T22:40:43.491Z"}
+{"level":"error","message":"Error uploading: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92bcyi/lnqgsn2qvgc11.jpg Error: Segments do not add up to provided total file size.","timestamp":"2018-07-27T22:40:46.667Z"}
+{"level":"error","message":"File too large https://i.redd.it/lnqgsn2qvgc11.jpg 92bcyi lnqgsn2qvgc11.jpg","timestamp":"2018-07-27T22:40:48.641Z"}
+{"level":"error","message":"Rmdir failed on: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92bcyi/","timestamp":"2018-07-27T22:40:48.642Z"}
+{"level":"info","message":"url cleaned: https://i.imgur.com/mTQ5fCh.gif,mTQ5fCh.gif","timestamp":"2018-07-27T22:40:49.190Z"}
+{"level":"error","message":"Mkdir failed: 92big3 mTQ5fCh.gif","timestamp":"2018-07-27T22:40:49.191Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:40:50.611Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:40:50.728Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:40:53.493Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:40:54.141Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/VainPreciousCusimanse-size_restricted.gif,VainPreciousCusimanse-size_restricted.gif","timestamp":"2018-07-27T22:40:55.071Z"}
+{"level":"info","message":"url cleaned: https://thumbs.gfycat.com/VainPreciousCusimanse-size_restricted.gif,VainPreciousCusimanse-size_restricted.gif","timestamp":"2018-07-27T22:40:55.783Z"}
+{"level":"error","message":"Mkdir failed: 92denv VainPreciousCusimanse-size_restricted.gif","timestamp":"2018-07-27T22:40:55.784Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:40:57.943Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/a2jn0es1jhc11.jpg,a2jn0es1jhc11.jpg","timestamp":"2018-07-27T22:41:00.600Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92fvpn/jgxlpti3sjc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92fvpn'","timestamp":"2018-07-27T22:41:55.823Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/a2jn0es1jhc11.jpg,a2jn0es1jhc11.jpg","timestamp":"2018-07-27T22:42:15.030Z"}
+{"level":"error","message":"Mkdir failed: 92c6cu a2jn0es1jhc11.jpg","timestamp":"2018-07-27T22:42:15.032Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:42:17.390Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/owisivf0cic11.jpg,owisivf0cic11.jpg","timestamp":"2018-07-27T22:42:20.431Z"}
+{"level":"error","message":"File too large https://i.imgur.com/Rk5Nezk.gif 92de3m Rk5Nezk.gif","timestamp":"2018-07-27T22:43:22.014Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/owisivf0cic11.jpg,owisivf0cic11.jpg","timestamp":"2018-07-27T22:43:23.965Z"}
+{"level":"error","message":"Mkdir failed: 92ddmk owisivf0cic11.jpg","timestamp":"2018-07-27T22:43:23.967Z"}
+{"level":"error","message":"File too large https://i.imgur.com/Rk5Nezk.gif 92de3m Rk5Nezk.gif","timestamp":"2018-07-27T22:43:41.467Z"}
+{"level":"error","message":"Rmdir failed on: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92de3m/","timestamp":"2018-07-27T22:43:41.468Z"}
+{"level":"error","message":"File too large https://i.imgur.com/mTQ5fCh.gif 92big3 mTQ5fCh.gif","timestamp":"2018-07-27T22:44:48.393Z"}
+{"level":"error","message":"File too large https://i.imgur.com/mTQ5fCh.gif 92big3 mTQ5fCh.gif","timestamp":"2018-07-27T22:44:52.996Z"}
+{"level":"error","message":"Rmdir failed on: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92big3/","timestamp":"2018-07-27T22:44:52.997Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92ddmk/owisivf0cic11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92ddmk'","timestamp":"2018-07-27T22:45:07.100Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92e3zw/XfNeC7C.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92e3zw'","timestamp":"2018-07-27T22:45:34.430Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/91sfkm/ExcellentWindingHapuku-size_restricted.gif not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/91sfkm'","timestamp":"2018-07-27T22:47:13.231Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:47:16.786Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92cinz/e3m5xhwzshc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92cinz'","timestamp":"2018-07-27T22:47:28.813Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c6cu/a2jn0es1jhc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92c6cu'","timestamp":"2018-07-27T22:48:33.266Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dskf/ThisImpracticalArrowcrab-size_restricted.gif not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dskf'","timestamp":"2018-07-27T22:49:25.620Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmvc/ks38xcjehic11.gif not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmvc'","timestamp":"2018-07-27T22:49:40.098Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lf2uen4j9jc11.jpg,lf2uen4j9jc11.jpg","timestamp":"2018-07-27T22:50:20.046Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/lf2uen4j9jc11.jpg,lf2uen4j9jc11.jpg","timestamp":"2018-07-27T22:50:38.015Z"}
+{"level":"error","message":"Mkdir failed: 92f08a lf2uen4j9jc11.jpg","timestamp":"2018-07-27T22:50:38.017Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92f08a/lf2uen4j9jc11.jpg not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92f08a'","timestamp":"2018-07-27T22:52:16.167Z"}
+{"level":"error","message":"/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92denv/VainPreciousCusimanse-size_restricted.gif not deleted. Error: ENOENT: no such file or directory, lstat '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92denv'","timestamp":"2018-07-27T22:53:20.280Z"}
+{"level":"info","message":"url cleaned: undefined","timestamp":"2018-07-27T22:57:32.235Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/mw7sgrt9hic11.jpg,mw7sgrt9hic11.jpg","timestamp":"2018-07-27T23:05:46.722Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmn2/mw7sgrt9hic11.jpg'","timestamp":"2018-07-27T23:05:46.725Z"}
+{"level":"error","message":"Download failed: Error media write stream\nUri: https://i.redd.it/mw7sgrt9hic11.jpg","timestamp":"2018-07-27T23:05:46.725Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open '/Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmn2/mw7sgrt9hic11.jpg'","timestamp":"2018-07-27T23:05:46.726Z"}
+{"level":"error","message":"Download failed: Error on url request\nUri: https://i.redd.it/mw7sgrt9hic11.jpg","timestamp":"2018-07-27T23:05:46.726Z"}
+{"level":"error","message":"Rmdir failed on: /Users/MACBOOKRETINA/Software/Node/reddit_miner/libs/../img/92dmn2/","timestamp":"2018-07-27T23:05:46.726Z"}
+{"level":"info","message":"url cleaned: https://i.redd.it/869c90dmtic11.jpg,869c90dmtic11.jpg","timestamp":"2018-07-27T23:07:45.935Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:32:20.771Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:33:24.702Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:35:57.048Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:36:11.724Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:38:26.765Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:49:30.405Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T00:52:51.278Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T01:06:11.910Z"}
+{"level":"info","message":"    ||||||||STARTING|||||||||   ","timestamp":"2018-07-28T01:10:29.610Z"}

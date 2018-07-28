@@ -17,15 +17,16 @@ module.exports =
 				return callback(err)
 			}
 		})
-		// log.info(`downloading ${uri} ${post_id} ${filename}`)
 		request(uri).pipe(fs.createWriteStream(path+filename).on('error', function (err) {
-			log.error(`${err}`)
+			// log.error(`${err}`)
+			console.log(`${err}`)
 		   	error_downloading('Error media write stream', uri, path)
 		   	callback(err)
 		})).on('close', ()=>{ 
 			//close write stream
 		}).on('error', (err)=>{
-			log.error(`${err}`)
+			console.log(`${err}`)
+			// log.error(`${err}`)
 			error_downloading('Error on url request',uri, path)
 			callback(err)
 		}).on('close', ()=>{ 
@@ -42,23 +43,29 @@ module.exports =
 	}
 
 function is_size_ok(file){
-	const size = fs.statSync(file).size
-	if (path_.extname(file).toLowerCase()==='.gif') {
-		return size > config.GIF_SIZE ? false : true
-	}else{
-		return size > config.PIC_SIZE ? false : true
+	try{
+		const size = fs.statSync(file).size
+		if (path_.extname(file).toLowerCase()==='.gif') {
+			return size > config.GIF_SIZE ? false : true
+		}else{
+			return size > config.PIC_SIZE ? false : true
+		}
+	}catch(e){
+		console.log('file already deleated');
 	}
 }
 
 function error_downloading(err, uri, path){
 	delete_download(path)
-	log.error(`Download failed: ${err}\nUri: ${uri}`)
+	// log.error(`Download failed: ${err}\nUri: ${uri}`)
+	console.log(`Download failed: ${err}\nUri: ${uri}`)
 }
 
 function delete_download(path){
 	rmdir(path, function (err, dirs, files) {
 	  if (err) {
-	  	log.error(`Rmdir failed on: ${path}`)
+		//   log.error(`Rmdir failed on: ${path}`)
+		  console.log(`Rmdir failed on: ${path}`);
 	  }
 	})
 }
