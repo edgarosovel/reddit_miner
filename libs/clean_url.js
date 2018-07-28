@@ -18,7 +18,7 @@ let wanted_extensions = {
 
 function imgur(url) {
 	if (path.extname(url)==='.gifv'){
-		url = `https://imgur.com/download/${path.basename(url)}`;
+		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
 	}else{
 		url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
 	}
@@ -27,7 +27,7 @@ function imgur(url) {
 
 function i_imgur(url) {
 	if (path.extname(url)==='.gifv') {
-		url = `https://imgur.com/download/${path.basename(url)}`;
+		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
 	}
 	return default_(url)
 }

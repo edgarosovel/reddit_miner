@@ -14,7 +14,8 @@ setTimeout(()=>{
 function make_post(post){
     if (!post) return;
     if (post.data.stickied || post.kind !== 't3') return;
-    let url = clean_url(post.data.domain, post.data.url);
+	let url = clean_url(post.data.domain, post.data.url);
+	console.log(url);
 	if (!url) return;
 	let title = post.data.title
 	let emoji = post.emojis
