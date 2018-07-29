@@ -15,13 +15,14 @@ function make_post(post){
     if (!post) return;
     if (post.data.stickied || post.kind !== 't3') return;
 	let url = clean_url(post.data.domain, post.data.url);
-	console.log(url);
+	console.log(process.memoryUsage());
+	console.log(`${post.data.url} cleaned to ${url}`);
 	if (!url) return;
 	let title = post.data.title
 	let emoji = post.emojis
 	twitter.tweet(url,title,emoji,(err)=>{
 		if (err) return;
-		// tweet succesfull
+		console.log(`Tweeted ${url}`);
 	});  
 }
 
