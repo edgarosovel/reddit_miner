@@ -1,6 +1,7 @@
-var Twit = require('twit')
+const Twit = require('twit')
+const path = require('path')
 var log = require('winston')
-var request = require('request')
+const request = require('request')
 const config = require(`${__dirname}/../config`)
 const bl = require('bl');
 
@@ -11,9 +12,17 @@ var T = new Twit({
   access_token_secret:  config.ACCES_TOKEN_SECRET
 })
 
+function is_size_ok(size, type){
+	console.log(`File type ${type} size is ${size}`);
+	if (type == '.gif') 
+		return size < config.MAX_GIF_SIZE;
+	return size < config.MAX_PIC_SIZE;
+}
+
 function tweet_with_media (media_URL, imgDesc, text, callback){
 	request(media_URL).pipe(bl(function (err, data) {
 			if (err) return callback(err)
+			if (!is_size_ok(bl.length, path.extname(url).toLowerCase())) return callback(true);
 			let base64 = data.toString('base64');
 			T.post('media/upload', { media_data: base64 }, 	function (err, data, response) {
 				if (err) {

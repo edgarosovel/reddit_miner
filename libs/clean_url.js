@@ -17,7 +17,8 @@ let wanted_extensions = {
 }
 
 function imgur(url) {
-	if (path.extname(url)==='.gifv'){
+	console.log(`Function imgur path.extname is ${path.extname(url)}`);
+	if (path.extname(url)=='.gifv'){
 		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
 	}else{
 		url = 'https://i.imgur.com/'+path.basename(url)+'.jpg'
@@ -26,7 +27,8 @@ function imgur(url) {
 }
 
 function i_imgur(url) {
-	if (path.extname(url)==='.gifv') {
+	console.log(`Function i_imgur path.extname is ${path.extname(url)}`);
+	if (path.extname(url)=='.gifv') {
 		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
 	}
 	return default_(url)
@@ -39,6 +41,7 @@ function gfycat(url){
 }
 
 function default_(url){
+	console.log(`Function default_ path.extname is ${path.extname(url)}`);
 	return (path.extname(url)!=='' && path.extname(url).toLowerCase() in wanted_extensions) ? url : undefined
 }
 
