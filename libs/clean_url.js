@@ -17,8 +17,9 @@ let wanted_extensions = {
 
 function imgur(url) {
 	if (path.extname(url)=='.gifv'){
-		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
-		return url;
+		return undefined; // gifvs are too heavy
+		// url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
+		// return url;
 	}else{
 		url = `https://i.imgur.com/${path.basename(url)}.jpg`;
 	}
@@ -27,7 +28,8 @@ function imgur(url) {
 
 function i_imgur(url) {
 	if (path.extname(url)=='.gifv') {
-		url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
+		return undefined; //gifvs are too heavy
+		// url = `https://imgur.com/download/${path.basename(url,'.gifv')}`;
 	}
 	return url;
 }

@@ -13,7 +13,6 @@ var T = new Twit({
 })
 
 function is_size_ok(size, type){
-	console.log(`File type ${type} size is ${size}`);
 	if (type == '.gif') 
 		return size < config.MAX_GIF_SIZE;
 	if (type == '.jpg' || type == '.jpeg' || type == '.png'){
@@ -25,9 +24,9 @@ function is_size_ok(size, type){
 function tweet_with_media (media_URL, imgDesc, text, callback){
 	request(media_URL).pipe(bl(function (err, data) {
 			if (err) return callback(err)
-			if (!is_size_ok(bl.length, path.extname(media_URL).toLowerCase())) return callback(true);
-			let base64 = data.toString('base64');
-			T.post('media/upload', { media_data: base64 }, 	function (err, data, response) {
+			if (!is_size_ok(data.toString().length, path.extname(media_URL).toLowerCase())) return callback(true);
+			T.post('media/upload', { media_data: data.toString('base64') }, 	function (err, data, response) {
+				delete data;
 				if (err) {
 					console.log(`Error uploading: ${media_URL} ${err}`);
 					return callback(err);
@@ -37,6 +36,7 @@ function tweet_with_media (media_URL, imgDesc, text, callback){
 				var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
 		
 				T.post('media/metadata/create', meta_params, function (err, data, response) {
+					delete data;
 					if (err) {
 						console.log(`Error updating metadata: ${media_URL} for ${mediaIdStr}`); // log.error(`Error updating metadata: ${media_path} for ${mediaIdStr}`)
 						return callback(err)
