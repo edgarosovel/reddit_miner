@@ -25,7 +25,7 @@ function is_size_ok(size, type){
 function tweet_with_media (media_URL, imgDesc, text, callback){
 	request(media_URL).pipe(bl(function (err, data) {
 			if (err) return callback(err)
-			if (!is_size_ok(bl.length, path.extname(url).toLowerCase())) return callback(true);
+			if (!is_size_ok(bl.length, path.extname(media_URL).toLowerCase())) return callback(true);
 			let base64 = data.toString('base64');
 			T.post('media/upload', { media_data: base64 }, 	function (err, data, response) {
 				if (err) {
