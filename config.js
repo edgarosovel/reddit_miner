@@ -14,5 +14,6 @@ module.exports = {
 	STARTUP_TIME: 10 * 1000, //En milisegundos
 	MAX_GIF_SIZE: 15728640,
 	MAX_PIC_SIZE: 5242880,
+	MAX_MEDIA_SIZE: 15728640,
 	subreddits: JSON.parse(process.env.SUBREDDITS || CONFIG_DEV.SUBREDDITS)
 }

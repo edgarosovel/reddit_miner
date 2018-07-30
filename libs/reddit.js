@@ -30,12 +30,12 @@ module.exports = {
 	watch_subreddit : (subreddit) => {
 	    snooper.watcher.getListingWatcher(subreddit.subreddit, {
 	        listing: subreddit.list,
-	        limit: Number(subreddit.num_of_posts)
+	        limit: subreddit.num_of_posts
 	    }).on('item', post => {
 			if (on_startup) return;
 			post.emojis = subreddit.emojis;
 			make_post(post);
 		}).on('error', console.error)
-		console.log(`${subreddit.subreddit} on list ${subreddit.list} num of posts ${subreddit.num_of_posts} num type ${typeof subreddit.num_of_posts}`); 
+		console.log(`   ${subreddit.subreddit} | List: ${subreddit.list} | Posts: ${subreddit.num_of_posts}`); 
 	}
 }

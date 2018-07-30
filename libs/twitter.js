@@ -16,7 +16,10 @@ function is_size_ok(size, type){
 	console.log(`File type ${type} size is ${size}`);
 	if (type == '.gif') 
 		return size < config.MAX_GIF_SIZE;
-	return size < config.MAX_PIC_SIZE;
+	if (type == '.jpg' || type == '.jpeg' || type == '.png'){
+		return size < config.MAX_PIC_SIZE;
+	}
+	return size < config.MAX_MEDIA_SIZE;
 }
 
 function tweet_with_media (media_URL, imgDesc, text, callback){
