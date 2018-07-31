@@ -15,7 +15,8 @@ function make_post(post){
     if (!post) return;
     if (post.data.stickied || post.kind !== 't3') return;
 	let url = clean_url(post.data.domain, post.data.url);
-	console.log(process.memoryUsage());
+	if (global.gc) global.gc();
+	console.log(`rss: ${process.memoryUsage().rss/1024/1024} heapTotal: ${process.memoryUsage().heapTotal/1024/1024} heapUsed ${process.memoryUsage().heapUsed/1024/1024}`);
 	console.log(`${post.data.url} cleaned to ${url}`);
 	if (!url) return;
 	let title = post.data.title
