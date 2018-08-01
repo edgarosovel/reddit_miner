@@ -4,7 +4,7 @@
   "description": "Mine memes from reddit",
   "main": "index.js",
   "scripts": {
-    "start": "node --expose-gc index.js",
+    "start": "node --expose-gc --optimize_for_size --max_old_space_size=460 index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
