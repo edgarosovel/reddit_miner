@@ -63,7 +63,7 @@ function tweet_with_media (media_URL, imgDesc, text, callback){
 
 module.exports = {
 	tweet:(media_URL, txt, emoji, callback)=>{
-        txt = txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/x-?post/i,'').replace(/(\s?\[|\()\s?\d+\s?x\s?\d+\s?(\]|\))/i,'').replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');
+        txt = txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/\s?x\s?-?\s?post/i,'').replace(/(\s?\[|\()\s?\d+\s?x\s?\d+\s?(\]|\))/i,'').replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');
         let msg = `${emoji}: "${txt}"`
         tweet_with_media(media_URL, txt, msg, callback)
     }
