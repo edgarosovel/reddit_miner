@@ -75,7 +75,11 @@ function tweet_only_text (txt, callback){
 
 module.exports = {
 	tweet:(params, callback)=>{
-        params.txt = params.txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/\s?x\s?-?\s?post/i,'').replace(/(\s?\[|\()\s?\d+\s?x\s?\d+\s?(\]|\))/i,'').replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');
+		params.txt = params.txt.replace(/reddit/i,'')
+		.replace(/\/?r\/([^\s]+)/g,'')	// r/somesubreddit
+		.replace(/\s?x\s?-?\s?post/i,'')	// x-post
+		.replace(/\s?(\[|\()?\s?\d+\s?(x|×)\s?\d+\s?(\]|\))?/i,'')	//[368x647] or 123x532
+		.replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');	//[OC]
 		if (params.media_URL)
 			tweet_with_media(params.media_URL, params.txt, params.emoji, callback)
 		else
