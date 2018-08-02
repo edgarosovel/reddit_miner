@@ -21,7 +21,8 @@ function is_size_ok(size, type){
 	return size < config.MAX_MEDIA_SIZE;
 }
 
-function tweet_with_media (media_URL, imgDesc, text, callback){
+function tweet_with_media (media_URL, txt, emoji, callback){
+	let text = `${emoji}: "${txt}"`;
 	request(media_URL).pipe(bl(function (err, data) {
 			if (err) return callback(err)
 			if (!is_size_ok(data.toString().length, path.extname(media_URL).toLowerCase())) return callback(true);
@@ -31,8 +32,8 @@ function tweet_with_media (media_URL, imgDesc, text, callback){
 					console.log(`Error uploading: ${media_URL} ${err}`);
 					return callback(err);
 				}
-				var mediaIdStr = data.media_id_string
-				var altText = imgDesc
+				var mediaIdStr = data.media_id_string;
+				var altText = txt;
 				var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
 		
 				T.post('media/metadata/create', meta_params, function (err, data, response) {
@@ -45,8 +46,8 @@ function tweet_with_media (media_URL, imgDesc, text, callback){
 		
 					T.post('statuses/update', params, function (err, data, response) {
 						if (err) {
-						console.log(`Error tweeting: ${err} ${text}`); // log.error(`Error tweeting: ${err} ${text}`)
-						return callback(err)
+							console.log(`Error tweeting: ${err} ${text}`); // log.error(`Error tweeting: ${err} ${text}`)
+							return callback(err)
 						}
 						//tweeted!
 						return callback(false)
@@ -57,14 +58,27 @@ function tweet_with_media (media_URL, imgDesc, text, callback){
 		}))
 		.on('error', (err)=>{
 			console.log(`Error downloading media ${err}`)
+			return callback(err)
 		});
+}
 
+function tweet_only_text (txt, callback){
+	var params = { status: txt}
+	T.post('statuses/update', params, function (err, data, response) {
+		if (err) {
+			console.log(`Error tweeting: ${err} ${txt}`); // log.error(`Error tweeting: ${err} ${txt}`)
+			return callback(err)
+		}
+		return callback(false)
+	})
 }
 
 module.exports = {
-	tweet:(media_URL, txt, emoji, callback)=>{
-        txt = txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/\s?x\s?-?\s?post/i,'').replace(/(\s?\[|\()\s?\d+\s?x\s?\d+\s?(\]|\))/i,'').replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');
-        let msg = `${emoji}: "${txt}"`
-        tweet_with_media(media_URL, txt, msg, callback)
-    }
+	tweet:(params, callback)=>{
+        params.txt = params.txt.replace(/reddit/i,'').replace(/\/?r\/([^\s]+)/g,'').replace(/\s?x\s?-?\s?post/i,'').replace(/(\s?\[|\()\s?\d+\s?x\s?\d+\s?(\]|\))/i,'').replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');
+		if (params.media_URL)
+			tweet_with_media(params.media_URL, params.txt, params.emoji, callback)
+		else
+			tweet_only_text(params.txt, callback);
+	}
 }
