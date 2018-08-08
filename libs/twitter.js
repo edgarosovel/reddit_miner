@@ -21,8 +21,8 @@ function is_size_ok(size, type){
 	return size < config.MAX_MEDIA_SIZE;
 }
 
-function tweet_with_media (media_URL, txt, emoji, callback){
-	let text = `${emoji}: "${txt}"`;
+function tweet_with_media (media_URL, txt, prefix, callback){
+	let text = `${prefix}${txt}`;
 	request(media_URL).pipe(bl(function (err, data) {
 			if (err) return callback(err)
 			if (!is_size_ok(data.toString().length, path.extname(media_URL).toLowerCase())) return callback(true);
@@ -81,7 +81,7 @@ module.exports = {
 		.replace(/\s?(\[|\()?\s?\d+\s?(x|×)\s?\d+\s?(\]|\))?/i,'')	//[368x647] or 123x532
 		.replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');	//[OC]
 		if (params.media_URL)
-			tweet_with_media(params.media_URL, params.txt, params.emoji, callback)
+			tweet_with_media(params.media_URL, params.txt, params.prefix, callback)
 		else
 			tweet_only_text(params.txt, callback);
 	}

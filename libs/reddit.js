@@ -25,8 +25,8 @@ function make_post_with_media(post) {
 	if (global.gc) global.gc();
 	if (!url) return;
 	let title = post.data.title
-	let emoji = post.emojis
-	twitter.tweet({media_URL:url, txt:title, emoji},(err)=>{
+	let prefix = post.prefix
+	twitter.tweet({media_URL:url, txt:title, prefix},(err)=>{
 		if (err) return;
 		console.log(`rss: ${process.memoryUsage().rss/1024/1024} heapTotal: ${process.memoryUsage().heapTotal/1024/1024} heapUsed: ${process.memoryUsage().heapUsed/1024/1024} external: ${process.memoryUsage().external/1024/1024}`);
 	});  	
@@ -46,7 +46,7 @@ module.exports = {
 	        limit: subreddit.num_of_posts
 	    }).on('item', post => {
 			if (on_startup) return;
-			post.emojis = subreddit.emojis;
+			post.prefix = subreddit.prefix;
 			post.type = subreddit.type;
 			handle_post(post);
 		}).on('error', console.error)
