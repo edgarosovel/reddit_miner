@@ -78,7 +78,7 @@ module.exports = {
 		params.txt = params.txt.replace(/reddit/i,'')
 		.replace(/\/?r\/([^\s]+)/g,'')	// r/somesubreddit
 		.replace(/\s?x\s?-?\s?post/i,'')	// x-post
-		.replace(/\s?(\[|\()?\s?\d+\s?(x|×|*)\s?\d+\s?(\]|\))?/i,'')	//[368x647] or 123x532
+		.replace(/\s?(\[|\()?\s?\d+\s?(x|×|\*)\s?\d+\s?(\]|\))?/i,'')	//[368x647] or 123x532
 		.replace(/\s?(\[|\()\s?oc\s?(\]|\))/i,'');	//[OC]
 		if (params.media_URL)
 			tweet_with_media(params.media_URL, params.txt, params.prefix, callback)
