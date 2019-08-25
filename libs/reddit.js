@@ -20,9 +20,21 @@ function make_post_only_text(post) {
 }
 
 function make_post_with_media(post) {
-    if (post.kind !== 't3') return;
-	let url = clean_url(post.data.domain, post.data.url);
+	if (post.kind !== 't3') return;
+	let url = clean_url({
+		domain: post.data.domain, 
+		url: post.data.url,
+		media_embed: post.data.media_embed.content,
+		fallback_url:  (post.data.media) ? ( (post.data.media.reddit_video) ? post.data.media.reddit_video.fallback_url : undefined ) : undefined
+	});
 	if (global.gc) global.gc();
+	if (config.IS_DEVELOPER_MODE){
+		console.log('');
+		console.log('///////////////////');
+		console.log(post.data.title);
+		console.log(`${post.data.domain}`)
+		console.log(`${post.data.url} -> ${url}`)
+	}
 	if (!url) return;
 	let title = post.data.title
 	let prefix = post.prefix
